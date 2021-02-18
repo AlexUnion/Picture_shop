@@ -1,0 +1,37 @@
+<nav>
+    <div class="nav-wrapper deep-purple darken-2">
+        <a href="/" class="brand-logo font-logo">PicArt</a>
+        <ul class="right hide-on-med-and-down">
+            {{#if isSearch}}
+                <li class="active"><a href="/search"><i class="material-icons left">search</i>Поиск</a></li>
+            {{else}}
+                <li><a href="/search"><i class="material-icons left">search</i>Поиск</a></li>
+            {{/if}}
+            {{#if isMain}}
+                <li class="active"><a href="/">Главная</a></li>
+            {{else}}
+                <li><a href="/">Главная</a></li>
+            {{/if}}
+            {{#if isCategory}}
+                <li class="active"><a href="/category">Категории</a></li>
+            {{else}}
+                <li><a href="/category">Категории</a></li>
+            {{/if}}
+            {{#if isAdd}}
+                <li class="active"><a href="/add">Добавить</a></li>
+            {{else}}
+                <li><a href="/add">Добавить</a></li>
+            {{/if}}
+            {{#if isLogin}}
+                <li class="active"><a href="/login">Вход</a></li>
+            {{else}}
+                <li><a href="/login">Вход</a></li>
+            {{/if}}
+            {{#if isBasket}}
+                <li class="active"><a href="/basket"><i class="material-icons right">view_module</i>Корзина</a></li>
+            {{else}}
+                <li><a href="/basket"><i class="material-icons right">view_module</i>Корзина</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,59 @@
+<div class="row container">
+    <h1>Edit</h1>
+
+    <form class="col s12" method="post" action="/edit">
+        <div class="row">
+
+            <input type="hidden" value="{{img._id}}" name="id">
+
+            <div class="input-field col s6">
+                <input id="title" type="text" maxlength="30" class="validate"
+                       name="title" required value="{{img.title}}">
+                <label for="title">Title</label>
+            </div>
+
+            <div class="input-field col s6">
+                <select name="category" id="category" class="validate" required>
+                    <option value="{{img.category}}" selected>{{img.category}}</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Water">Water</option>
+                    <option value="Travels">Travels</option>
+                    <option value="Abstraction">Abstraction</option>
+                    <option value="City">City</option>
+                    <option value="Anime">Anime</option>
+                    <option value="Animals">Animals</option>
+                    <option value="Space">Space</option>
+                    <option value="Love">Love</option>
+                    <option value="Cars">Cars</option>
+                    <option value="Words">Words</option>
+                    <option value="Others">Others</option>
+                </select>
+                <label for="category">Category</label>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col s12">
+                <div class="input-field col s6">
+                    <input id="price" name="price" type="number" step="any" min="0" max="1000"
+                           class="validate" value="{{img.price}}">
+                    <label for="price">Price</label>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+
+    <form action="/edit/delete" class="col s12" style="width: 100%; text-align: right" method="post">
+        <input type="hidden" value="{{img._id}}" name="id">
+
+        <button class="btn waves-effect waves-light delete__btn" type="submit" name="action">Delete
+            <i class="material-icons right">delete</i>
+        </button>
+    </form>
+
+</div>

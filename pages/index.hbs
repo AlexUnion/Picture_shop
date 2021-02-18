@@ -1,0 +1,41 @@
+<h1>Home page</h1>
+<hr>
+<div class="main-container">
+    <div class="img-container">
+
+        {{#if images.length}}
+
+            {{#each images}}
+                <div class="img-item">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./static/img/{{this.path}}" alt="">
+                                    <span class="card-title">{{this.title}}</span>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <div class="main__description">
+                                        <div class="main__text">Category: </div>
+                                        <a class="main__category" href="/category">{{this.category}}</a>
+                                        <p class="main__price price">{{this.price}}</p>
+                                    </div>
+                                </div>
+                                <div class="card-action">
+                                    <div class="flex__direction">
+                                        <a href="/edit?id={{this._id}}" class="link">Редактировать</a>
+                                        <a href="#" class="link">Купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <h2>Проектов пока нет</h2>
+        {{/if}}
+
+    </div>
+</div>

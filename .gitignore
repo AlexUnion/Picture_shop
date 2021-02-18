@@ -1,0 +1,10 @@
+.idea
+/node_modules
+/uploads
+/js
+/public/fonts
+/public/img
+/public/js/materialize.js
+/public/js/materialize.min.js
+package-lock.json
+config.js
